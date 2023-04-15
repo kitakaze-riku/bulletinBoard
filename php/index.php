@@ -44,7 +44,7 @@ $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <tbody>
             <?php foreach ($results as $row) : ?>
                 <tr>
-                    <td><a href="post.php?id=<?php echo $row['id']; ?>"><?php echo $row['title']; ?></a></td>
+                    <td><a name="single" href="post.php?id=<?php echo $row['id']; ?>"><?php echo $row['title']; ?></a></td>
                     <td><?php echo $row['name']; ?></td>
                     <td><?php echo $row['post_registration_date']; ?></td>
                 </tr>

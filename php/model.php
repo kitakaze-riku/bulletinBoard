@@ -41,3 +41,13 @@ function loading_data($db)
 
     exit;
 }
+
+function singleData($db, $pageId)
+{
+    // echo 'SELECT * FROM posts WHERE id =' . $pageId . ' ;';
+    $stmt = $db->query('SELECT * FROM posts WHERE id =' . $pageId . ' ;');
+    $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    // var_dump($results);
+    return $results;
+    exit;
+}

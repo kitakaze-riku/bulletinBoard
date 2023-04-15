@@ -14,3 +14,14 @@ if (isset($_POST['submit'])) {
     require_once 'model.php';
     save_post($name, $title, $content, $db);
 }
+
+
+if (isset($_GET['id'])) {
+    $pageId = $_GET['id'];
+
+    require_once 'model.php';
+    $results = singleData($db, $pageId);
+    // exit;
+    // var_dump($results);
+    include 'single.php';
+}
